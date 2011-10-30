@@ -1,4 +1,4 @@
 {
-    "message": "'NoneType' object is not iterable", 
+    "message": "'NoneType' object is not iterable",
     "code": 500
 }

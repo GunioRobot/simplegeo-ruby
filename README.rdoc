@@ -18,7 +18,7 @@ Start by requiring SimpleGeo and setting your authentication credentials:
 
   require 'simple_geo'
   SimpleGeo::Client.set_credentials('token', 'secret')
-  
+
 === Getting a record
 
   record = SimpleGeo::Client.get_record('com.simplegeo.global.geonames', '5373629')
@@ -42,7 +42,7 @@ Start by requiring SimpleGeo and setting your authentication credentials:
   SimpleGeo::Client.add_record(record)
 
 === Updating a record
-  
+
   record = SimpleGeo::Client.get_record('com.example.testlayer', '1234')
   record.lat = 40.714269
   record.lon = -74.005973
@@ -87,32 +87,32 @@ Start by requiring SimpleGeo and setting your authentication credentials:
 See http://help.simplegeo.com/faqs/api-documentation/endpoints for other optional params
 
   # by lat, lon
-  records = SimpleGeo::Client.get_nearby_records('com.example.testlayer', 
+  records = SimpleGeo::Client.get_nearby_records('com.example.testlayer',
     :lat => 37.759650000000001,
     :lon => -122.42608)
-    
+
   # by geohash
-  records = SimpleGeo::Client.get_nearby_records('com.example.testlayer', 
+  records = SimpleGeo::Client.get_nearby_records('com.example.testlayer',
     :geohash => '9q8yy1ujcsfm')
 
 === Getting a nearby address for a lat and lon
 
   nearby_address = SimpleGeo::Client.get_nearby_address(37.759650000000001, -122.42608)
-  
+
 === Getting SpotRank density information
 
   # by day
   density_info = SimpleGeo::Client.get_density(37.75965, -122.42608, 'sat')
-  
+
   # by hour
   density_info = SimpleGeo::Client.get_density(37.75965, -122.42608, 'sat', '16' )
 
 === Other APIs
 
-For more examples see: spec/client_spec.rb 
+For more examples see: spec/client_spec.rb
 
 == Note on Patches/Pull Requests
- 
+
 * Fork the project.
 * Make your feature addition or bug fix.
 * Add tests for it. This is important so I don't break it in a

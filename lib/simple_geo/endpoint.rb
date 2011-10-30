@@ -35,11 +35,11 @@ module SimpleGeo
       def nearby_address(lat, lon)
         endpoint_url "nearby/address/#{lat},#{lon}.json"
       end
-      
+
       def context(lat, lon)
         endpoint_url "context/#{lat},#{lon}.json", '1.0'
       end
-      
+
       def places(lat, lon, options)
         if options.empty?
           endpoint_url "places/#{lat},#{lon}.json", '1.0'

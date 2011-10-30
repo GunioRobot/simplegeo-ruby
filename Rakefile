@@ -9,7 +9,7 @@ begin
     gem.email = "dan@dofter.com"
     gem.homepage = "http://github.com/archfear/sg-ruby"
     gem.authors = ["Dan Dofter"]
-    
+
     gem.add_dependency("oauth", ">= 0.4.0")
     gem.add_dependency("json_pure")
 
